@@ -16,14 +16,17 @@ const buzzWord = "buzz";
 console.log(buzzWord);
 
 //TODO inizializzo il ciclo for: dichiaro una variabile "i" con valore 0.
-for (let i = 0; i < 101; i = i + 1) { /*Finche i < 101 è VERA il ciclo eseguirà le istruzioni all'interno del ciclo FOR;
-                                        alla fine di ogni "giro" sommerà +1 a "i"*/
-                                        
-    //TODO Assegno alla variabile "element" il valore "i"
+for (let i = 0; i < 101; i = i + 1) { /*Finche i < 101 è VERA, il ciclo FOR eseguirà le istruzioni al suo interno;
+                                        alla fine di ogni "giro" sommerà +1 a "i"
+                                        fino ad arrivare a 100*/
+
+    //TODO Assegno alla variabile "element" il valore "i", quindi ELEMENT è come se fosse "i"
     let element = i;
     
-//! Imposto un test condizionale 
-//! metto per prima la condizione nella quale "i" è multiplo sia di 3 che di 5
+//! Imposto un test condizionale; 
+//! Metto per prima la condizione nella quale "i" è multiplo sia di 3 che di 5; 
+//! Questo perchè se mettessi questa condizione alla fine non si potrebbe mai verificare, poichè se uscisse 15(multiplo sia di 3 che di 5),
+//! ricadrebbe dentro una delle altre due condizioni (in base a quale si è messa x prima).
     if (((i % 3) == 0) && ((i % 5) == 0)) {
         element = fizzWord + buzzWord; //* se si verificasse questa condizione "element" avrebbe come valore la concatenazione di fizzWord + buzzWord 
     } else if ((i % 3) == 0) { //! poi metto la condizione x la quale "i" è multiplo di 3 e non di 5
